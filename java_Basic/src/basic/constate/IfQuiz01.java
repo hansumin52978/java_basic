@@ -24,11 +24,11 @@ public class IfQuiz01 {
 		System.out.println("입력받은 수: ");
 		
 		if(a > b) {
-			System.out.printf("%d이 큰 수 입니다.", a, b);
+			System.out.println(a + "이(가) 큰 수 입니다.");
 		} else if(b > a){
-			System.out.printf("%d이 큰 수 입니다.", a, b);
-		} else if(a == b) {
-			System.out.printf("같은 수 입니다.", a, b);
+			System.out.println(b + "이(가) 큰 수 입니다.");
+		} else {
+			System.out.println("같은 수 입니다.");
 		}
 		
 		sc.close();

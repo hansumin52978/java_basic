@@ -14,47 +14,56 @@ public class SwitchQuiz01 {
 		          결과를 말씀해 주세요.
 		         */
 		
-		
-		int a = 0;
-		int b = 0;
+//		int a = 0;
+//		int b = 0;
 		int result = 0;
-		String op = null;
+		boolean flag = false;
+//		String operator = null;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("첫 번째 수를 입력하세요: ");
-		a = sc.nextInt();
+		int a = sc.nextInt();
 		System.out.print("연산자를 입력하세요: ");
-		op = sc.next();
+		String operator = sc.next();
 		System.out.print("두 번째 수를 입력하세요: ");
-		b = sc.nextInt();
+		int b = sc.nextInt();
 		
-		switch (op) {
+		switch (operator) {
 		case "+" :
 			result = a + b;
-			System.out.printf("%d + %d = %d", a, b, result);
+//			System.out.printf("%d + %d = %d", a, b, result);
 			break;
 		case "-" :
 			result = a - b;
-			System.out.printf("%d - %d = %d", a, b, result);
+//			System.out.printf("%d - %d = %d", a, b, result);
 			break;
 		case "*" :
 			result = a * b;
-			System.out.printf("%d * %d = %d", a, b, result);
+//			System.out.printf("%d * %d = %d", a, b, result);
 			break;
 		case "/" :
+			if( b == 0) {
+				System.out.println("연산할 수 없는 입력값 입니다.");
+				flag = true;
+				break;
+			}
 			result = a / b;
-			System.out.printf("%d / %d = %d", a, b, result);
+//			System.out.printf("%d / %d = %d", a, b, result);
 			break;
 		case "%" :
 			result = a % b;
-			System.out.printf("%d %% %d = %d", a, b, result);
+//			System.out.printf("%d %% %d = %d", a, b, result);
 			break;
 		default:
 			System.out.println("잘못된 연산자 입력하셨습니다.");
 			break;
 		}
 		
-
+		if(!flag) {
+			System.out.printf("%d %s %d = %d\n", a, operator, b, result);			
+		}
+		
+		sc.close();
 		
 	}
 

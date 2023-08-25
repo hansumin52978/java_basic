@@ -23,26 +23,36 @@ public class IfQuiz03 {
 		System.out.print("세번째 수를 입력하시오: ");
 		int c = sc.nextInt();
 		
-		int max = 0;
-		int mid = 0;
-		int min = 0;
+		int max, mid, min;
 		
-		if(a>b && b>c) {
-			max = a; mid = b; min = c;
-		} else if(a>c && c>b) {
-			max = a; mid = c; min = b;
-		} else if(b>a && a>c) {
-			max = b; mid = a; min = c;
-		} else if(b>c && c>a) {
-			max = b; mid = c; min = a;
-		} else if(c>a && a>b) {
-			max = c; mid = a; min = b;
-		} else if(c>b && b>a) {
+		if(a>b && a>c) { // a가 max다!
+			max = a;
+			if(b > c) {
+				mid = b; min = c;
+			} else {
+				mid = c; min = b;
+			}
+		
+		} else if(b > a && b > c) { // b가 max다!
+			max = b;
+			if(a > c) {
+				mid = a; min = c;
+			} else {
+				mid = c; min = a;
+			}
+		} else { // c가 max다!
+			max = c;
+			if(a > b) {
+				mid = a; min = b;
+			} else {
+				mid = b; min = a;
+			}
+		}
 			
-			max = c; mid = b; min = a;}
-			System.out.println("가장 큰 값: " + max);
-			System.out.println("가장 중간 값: " + mid);
-			System.out.println("가장 작은 값: " + min);
+		System.out.println("-------------------------");
+		System.out.println("최대값: " + max);
+		System.out.println("중간값: " + mid);
+		System.out.println("최소값: " + min);
 		
 		sc.close();
 		
