@@ -71,6 +71,7 @@ public class MethodExample2 {
 //		 for(int n : nums) {
 //			 total += n;
 //		 }
+		 
 		 return total;
 	 }
 	 
