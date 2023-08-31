@@ -6,12 +6,13 @@ public class MainClass {
 		
 		MyBirth my = new MyBirth();
 //		my.year = 1992; (x)
-		my.setYear(5);
-		my.setMonth(9);
-		my.setDay(13);
+		my.setYear(2002);
+		my.setMonth(3);
+		my.setDay(31);
+		my.birthInfo();
 
-		System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n"
-				, my.getYear("aaa1111!"), my.getMonth(), my.getDay());
+//		System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n"
+//				, my.getYear("aaa1111!"), my.getMonth(), my.getDay());
 	
 		
 	}
