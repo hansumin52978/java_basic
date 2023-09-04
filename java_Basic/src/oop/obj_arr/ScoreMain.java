@@ -2,7 +2,7 @@ package oop.obj_arr;
 
 import java.util.Scanner;
 
-/*
+		/*
          - Score 객체를 담을 수 있는 배열을 선언하세요.
           배열의 크기는 넉넉하게 100개로 하겠습니다.
           
@@ -22,18 +22,20 @@ public class ScoreMain {
 	
 	public static void main(String[] args) {
 	
+	Score[] scores = new Score[100];
 	Scanner sc = new Scanner(System.in);
-	Score[] my = new Score[100];
 
-	
-	
-	for(int i=0; i<my.length; i++) {
+	for(int i=0; i<scores.length; i++) {
+		System.out.println("*** 학생 점수 입력 프로그램 ***");
+		System.out.println("'그만'을 입력하시면 종료됩니다.");
+		
 		System.out.print("이름을 입력해주세요: ");
 		String name = sc.next();
 		if(name.equals("그만")) {
 			System.out.println("입력을 종료합니다.");
 			break;
 		}
+		
 		System.out.print("국어 점수를 입력해주세요: ");
 		int korean = sc.nextInt();
 		System.out.print("영어 점수를 입력해주세요: ");
@@ -43,14 +45,14 @@ public class ScoreMain {
 		System.out.print("과학 점수를 입력해주세요: ");
 		int science = sc.nextInt();
 		
-		System.out.println("*** 평균 값 계산중 ***");
-		my[i] = new Score(name, korean, english, math, science);
+		System.out.println("*** 입력 완료! ***\n");
+		scores[i] = new Score(name, korean, english, math, science);
 		
-		} // 반복문이 끝남.
+		} // 입력 반복문이 끝남.
 
 		//		Score a = new Score(name, korean, english, math, science);
 		
-		for ( Score a : my ) {
+		for ( Score a : scores ) {
 			if( a == null ) break;
 			a.scoreInfo();
 		}
