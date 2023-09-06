@@ -27,7 +27,6 @@ public class CompareStr {
 		Scanner sc = new Scanner(System.in);
 		
 		User kim = new User();
-		
 		kim.id = "abc1234";
 		kim.pw = "aaa1111";
 		

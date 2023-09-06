@@ -26,7 +26,7 @@ public class ArraysQuiz {
 
 	public static void main(String[] args) {
 		
-		String[] participant = {"홍길동", "김길동", "김철수", "최철수", "박영희", "한수민"};
+		String[] participant = {"홍길동", "김길동", "김철수", "최철수", "박영희"};
 		String[] completion = {"김철수", "김길동", "박영희", "최철수" };
 		
 		System.out.println("완주하지 못한 자: " + solution(participant, completion));
