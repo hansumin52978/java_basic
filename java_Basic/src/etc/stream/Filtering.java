@@ -16,9 +16,9 @@ public class Filtering {
 
         // 메뉴 중에 채식주의자가 먹을 수 있는 요리를 필터링
         menuList.stream()
-                .filter(dish -> dish.isVegetarian())
+                .filter(Dish::isVegetarian)
                 .collect(toList())
-                .forEach(dish -> System.out.println(dish));
+                .forEach(System.out::println);
 
 //        dishInVegiterian.forEach(dish -> System.out.println("dish = " + dish));
 
